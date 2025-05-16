@@ -29,9 +29,9 @@ jobs:
       
       - name: Build
         run: npm run build
-      - uses: actions/checkout@v4
-      # Add any build steps here. For example:
-      # - run: npm ci && npm run build
+
+      - name: Check dist directory
+        run: ls -la dist 
       
       - uses: FirebaseExtended/action-hosting-deploy@v0
         with:
